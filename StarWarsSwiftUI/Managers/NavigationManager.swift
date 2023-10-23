@@ -8,10 +8,17 @@
 import SwiftUI
 import Combine
 
+// Content is a generic parameter so the `NavigationContainer` may carry any `View` we like
 struct NavigationContainer<Content>: View where Content: View {
     
+    /*
+     @EnvironmentObject var
+        - a property wrapper used within a view to access an environment object that has been injected higher up in the view hierarchy using content.environmentObject
+        - it allows a view to access and observe an environment object without needing to explicitly pass it down through the view hierarchy
+     */
     @EnvironmentObject var navManager:      NavigationManager
     
+    // we handle and manipulate the `path` on our own as the built-in is not comfortable and a bit tricky in use
     @State private var path: [Module] = []
 
     let content: Content

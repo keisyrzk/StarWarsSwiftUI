@@ -7,10 +7,12 @@
 
 import Foundation
 
+// 'ObservableObject' makes the ViewModel be able to publish changes to its subscribers
 class PeopleListViewModel: ObservableObject {
     
     private let allPeople: [Person]
     
+    // '@Published' ensures all subscribers receive the change signal
     @Published var people:  [Person] = []
     @Published var filters: [PeopleFilter] = []{
         didSet {

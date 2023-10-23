@@ -27,7 +27,6 @@ struct MainView: View {
         .onReceive(viewModel.$people.filter{ !$0.isEmpty },perform: { people in
             navManager.push(.peopleList(people))
         })
-        
     }
     
     private var peopleButton: some View {

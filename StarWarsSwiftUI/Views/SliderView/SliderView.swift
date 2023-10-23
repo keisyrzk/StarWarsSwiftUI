@@ -13,7 +13,7 @@ struct SliderView: View {
     
     var body: some View {
         VStack {
-            Text("Selected Value: \(Int(selectedValue))")
+            Text("Selected max mass: \(Int(selectedValue))")
                 .font(.headline)
                 .padding()
             

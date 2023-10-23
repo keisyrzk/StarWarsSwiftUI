@@ -30,14 +30,16 @@ struct PeopleListView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    //navManager.push(.filters(selectedFilters: $viewModel.filters))    // ?? why this will not work? the FilterView is not refreshing its UI when values change?
-                    // because the FilterView is pushed so it is an other being not able to be refreshed by the previous view that holds the viewModel to which the binding is made
+                    // [ QUESTION ]
+                    // navManager.push(.filters(selectedFilters: $viewModel.filters))
+                    // ?? why this will not work? the FilterView is not refreshing its UI when values change?
                     viewModel.isFiltersViewPresented.toggle()
                 }) {
                     Image(systemName: "line.horizontal.3.decrease.circle")
                 }
             }
         }
+        // presents a modal view
         .sheet(isPresented: $viewModel.isFiltersViewPresented) {
             Module.filters(selectedFilters: $viewModel.filters).view
         }
