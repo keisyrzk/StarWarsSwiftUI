@@ -134,10 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				CCC2ABC62ADE710E00B4247F /* Modules.swift */,
-				CCC2AC062ADF960C00B4247F /* FilterView */,
-				CCC2ABDF2ADE746100B4247F /* PersonDetailsView */,
-				CCC2ABD62ADE731A00B4247F /* PeopleListView */,
 				CCC2ABD32ADE720D00B4247F /* Main */,
+				CCC2ABD62ADE731A00B4247F /* PeopleListView */,
+				CCC2ABDF2ADE746100B4247F /* PersonDetailsView */,
+				CCC2AC062ADF960C00B4247F /* FilterView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";

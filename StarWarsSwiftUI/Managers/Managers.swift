@@ -16,6 +16,9 @@ struct Managers: ViewModifier {
          .environmentObject
             - injects an environment object into the view hierarchy.
             - it provides an environment object to the view and all its child views within the view hierarchy.
+         
+         "Self"
+            is a convention in Swift to refer to the type itself. It distinguishes it from referring to an instance of the type
          */
         content
             .environmentObject(Self.navigationManager)

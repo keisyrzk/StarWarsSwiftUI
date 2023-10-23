@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+    'Hashable'
+        used to uniqueally compare two Modules aka identify them being unique
+ */
 enum Module: Hashable {
     
     static func == (lhs: Module, rhs: Module) -> Bool {
